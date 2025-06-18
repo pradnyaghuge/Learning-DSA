@@ -39,7 +39,7 @@ This is where I document my DSA practice, from the very basics to advanced conce
 
 | Date       | Topic            | Problem Link                  | Notes |
 |------------|------------------|-------------------------------|-------|
-| 2025-06-17 | Arrays - Basics  | [Two Sum - LeetCode](https://leetcode.com/problems/two-sum/) | ✅     |
+| 2025-06-17 | basic  | [count no of digit in no- LeetCode](https://) | ✅     |
 | ...        | ...              | ...                           | ...   |
 
 ---

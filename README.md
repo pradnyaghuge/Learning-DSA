@@ -30,21 +30,9 @@ This is where I document my DSA practice, from the very basics to advanced conce
 
 ## 🛠️ Languages & Platforms
 
-- Language: `JavaScript` / `Python` / `C++` *(choose yours)*  
+- Language: `JavaScript`
 - Platforms: LeetCode | GeeksforGeeks | HackerRank | Codeforces
 
----
-
-## 📅 Progress Tracker
-
-| Date       | Topic            | Problem Link                  | Notes |
-|------------|------------------|-------------------------------|-------|
-| 2025-06-17 | basic  | [count no of digit in no- LeetCode](https://) | ✅     |
- 2025-06-24 | basic  | [palindrome no- LeetCode](https://leetcode.com/problems/palindrome-number/description/) | ✅     |
-
-| ...        | ...              | ...                           | ...   |
-
----
 
 ## 🧠 Tips for Consistency
 

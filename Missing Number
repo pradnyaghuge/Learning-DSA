@@ -1,0 +1,16 @@
+
+var missingNumber = function (nums) {
+    let n = nums.length;
+    
+    curr_sum = 0;
+    let sum = n * (n + 1) / 2;
+
+    for (let i = 0; i < nums.length; i++) {
+
+        curr_sum+=nums[i];
+
+
+    }
+    
+    return sum - curr_sum;
+};

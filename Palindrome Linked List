@@ -31,7 +31,7 @@ var isPalindrome = function(head) {
     
 };
 
-Optimized Approch: with time complexity O(n) and space complexity = O(1)
+Optimized Approch: with time complexity O(n) and space complexity= O(1)
 
 /**
  * Definition for singly-linked list.

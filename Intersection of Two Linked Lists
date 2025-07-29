@@ -17,3 +17,25 @@ var getIntersectionNode = function(headA, headB) {
     return PointerA;
     
 };
+
+Brute Force2: 
+Yes, that would indeed work as a brute force approach! What you'd do is take each node from `listA` one by one, and compare it with every node in `listB`. If you find a match (i.e., the two nodes are the same object in memory), you've found the intersection. If no match is found after comparing all nodes, return `null`. 
+
+However, this brute force approach is highly inefficient. The time complexity would be **O(m × n)**, where `m` and `n` are the lengths of `listA` and `listB` respectively. This is because for every node in `listA`, you're iterating through the entirety of `listB`.
+
+var getIntersectionNode = function(headA, headB) {
+    let currA=headA;
+    while(currA){
+        let currB=headB;
+        while(currB){
+            if(currA==currB){
+                return currA;
+            }
+            currB=currB.next;
+        }
+        currA=currA.next;
+    }
+
+    return null;
+    
+};

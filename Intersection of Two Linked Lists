@@ -1,0 +1,19 @@
+
+Brute force: 
+
+
+Here’s the idea: Use two pointers, one starting at the head of `listA` and the other at the head of `listB`. When a pointer reaches the end of its respective list, instead of stopping, it jumps to the head of the other list. This "switching" ensures that both pointers traverse the same total distance, even if the lists have different lengths. 
+
+Now, think about this—if the lists intersect, the pointers will eventually meet at the intersection node. If they don’t intersect, the pointers will both reach `null` at the same time. 
+
+var getIntersectionNode = function(headA, headB) {
+    let PointerA=headA;
+    let PointerB=headB;
+    if(!headA || !headB) return null;
+    while(PointerA!==PointerB){
+        PointerA=PointerA?PointerA.next:headB;
+        PointerB=PointerB?PointerB.next:headA;
+    }
+    return PointerA;
+    
+};

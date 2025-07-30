@@ -39,3 +39,44 @@ var getIntersectionNode = function(headA, headB) {
     return null;
     
 };
+
+
+optimized Approch : 
+Ah, you're thinking about the **hash set approach**, which is a valid and straightforward way to solve the problem! Let me explain it step by step:
+
+### Hash Set Approach:
+The idea is to use a **hash set** to store all the nodes from `headB`. Once we have the set, we can iterate through `headA` and check if any node in `headA` exists in the set. If we find a match, that's the intersection node! If no match is found after traversing `headA`, then there is no intersection.
+
+### How It Works:
+1. **Step 1**: Create an empty hash set.
+2. **Step 2**: Traverse through `headB` and add each node to the hash set. This ensures that every node in `headB` is stored in the set for quick lookup.
+3. **Step 3**: Traverse through `headA` and check for each node if it exists in the hash set. If a node from `headA` exists in the set, you've found the intersection node!
+4. **Step 4**: If you finish traversing `headA` without finding any node in the set, return `null` because there's no intersection.
+
+
+### Time and Space Complexity:
+- **Time Complexity**: O(m + n), where `m` is the length of `headA` and `n` is the length of `headB`.
+- Traversing `headB` takes O(n).
+- Traversing `headA` takes O(m).
+- **Space Complexity**: O(n), because we store all nodes from `headB` in the hash set.
+
+code:
+
+var getIntersectionNode = function(headA, headB) {
+    let set= new Set();
+    while(headB){
+        set.add(headB)
+        headB=headB.next;
+    }
+    while(headA){
+        if(set.has(headA)){
+            return headA;
+        }
+        headA=headA.next;
+    }
+
+    return null;
+
+
+  
+};

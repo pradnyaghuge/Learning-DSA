@@ -13,3 +13,24 @@ var findWordsContaining = function(words, x) {
     return number;
     
 };
+
+without using built in method
+/**
+ * @param {string[]} words
+ * @param {character} x
+ * @return {number[]}
+ */
+var findWordsContaining = function(words, x) {
+    let number=[];
+    for(let i=0;i<words.length;i++){
+        for(let j=0;j<words[i].length;j++){
+            if(words[i][j]==x){
+                number.push(i);
+                break;
+            }
+        }
+        
+    }
+    return number;
+    
+};

@@ -1,0 +1,31 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var maxFreqSum = function(s) {
+    let map={};
+    for(let i=0;i<s.length;i++){
+        if(!map[s[i]]){
+            map[s[i]]=1;
+        }else{
+            map[s[i]]++;
+        }
+    }
+    let vovels=['a','e','i','o','u'];
+    let vovelMax=0;
+    let consonantMax=0;
+    for(i=0;i<s.length;i++){
+        if(vovels.includes(s[i])){
+            if(map[s[i]]>vovelMax){
+                vovelMax=map[s[i]];
+            }
+            }else{
+                if(map[s[i]]>consonantMax){
+                    consonantMax=map[s[i]];
+                    
+                }
+        }
+    }
+    return consonantMax + vovelMax;
+    
+};

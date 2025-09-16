@@ -1,0 +1,27 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var maxFreqSum = function (s) {
+    let map = {};
+    for (let i = 0; i < s.length; i++) {
+        map[s[i]] = !map[s[i]] ? 1 : ++map[s[i]];
+
+
+    }
+    let vovels = ['a', 'e', 'i', 'o', 'u'];
+    let vovelMax = 0;
+    let consonantMax = 0;
+    let mapKeys = Object.keys(map);
+    for (i = 0; i < mapKeys.length; i++) {
+        if (vovels.includes(mapKeys[i])) {
+            vovelMax=Math.max(map[mapKeys[i]],vovelMax);
+           
+        } else {
+            consonantMax=Math.max(map[mapKeys[i]],consonantMax)
+          
+        }
+    }
+    return consonantMax + vovelMax;
+
+};

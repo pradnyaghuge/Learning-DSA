@@ -1,0 +1,25 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var balancedStringSplit = function(s) {
+    if(s.length<2) return;
+    let count=0;
+    let rcount=0;
+    let lcount=0;
+    for(i=0;i<s.length;i++){
+        if(s[i]=='L'){
+            lcount++;
+
+        }else{
+            rcount++;
+        }
+        if(lcount==rcount){
+            count++;
+            rcount=0;
+            lcount=0;
+        }
+    }
+    return count;
+    
+};

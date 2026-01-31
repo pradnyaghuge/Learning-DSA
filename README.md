@@ -31,7 +31,7 @@ This is where I document my DSA practice, from the very basics to advanced conce
 ## 🛠️ Languages & Platforms
 
 - Language: `JavaScript`
-- Platforms: LeetCode | GeeksforGeeks | HackerRank | Codeforces
+- Platform: LeetCode 
 
 
 ## 🧠 Tips for Consistency
@@ -39,7 +39,7 @@ This is where I document my DSA practice, from the very basics to advanced conce
 - 📌 1 Problem a Day  
 - 🧠 Think Before You Code  
 - 🔁 Revise regularly  
-- 🚫 Don't fear tough problems!
+- 🚫 Don't fear Hard problems!
 
 ---
 

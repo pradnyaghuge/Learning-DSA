@@ -1,0 +1,66 @@
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+
+/**
+ * @param {ListNode} headA
+ * @param {ListNode} headB
+ * @return {ListNode}
+ */
+var getIntersectionNode = function (headA, headB) {
+    //linked lists we will solve it using two pointers apprch
+    //1.traverse A find out length
+    let n = 0;
+    let pA = headA;
+    while (pA) {
+        ++n;
+        pA = pA.next;
+
+    }
+    //2.traverse B find out length
+    let m = 0;
+    let pB=headB;
+    while (pB) {
+        ++m;
+        pB = pB.next;
+    }
+    //3.take out the diffrence between these 2 and whichever node
+    // is higher length move pointer by the diffrence
+
+    let diff = Math.abs(n - m);
+    //i want this --first list is small second is large so i will swap head pointers if m is greater
+
+    if (n > m) {
+        let temp = headA;
+        headA = headB;
+        headB = temp;
+    }
+
+    for (let i = 0; i < diff; i++) {
+        headB = headB.next;
+    }
+
+    //4.then traverse both linked list and comapare till pA!==pB
+    //5.if they are equal then we found out intersection point 
+
+    pA=headA;
+    pB=headB;
+
+    while (pA != pB) {
+        pA=pA.next;
+        pB=pB.next;
+    }
+
+    return pB;
+
+
+    // time complexity=log(o+m)
+    // space complexity=log o(1)
+
+
+
+};

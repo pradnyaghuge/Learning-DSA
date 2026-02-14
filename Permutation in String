@@ -1,0 +1,47 @@
+/**
+ * @param {string} s1
+ * @param {string} s2
+ * @return {boolean}
+ */
+var checkInclusion = function (s1, s2) {
+    // declare the arrays
+    let hashW = Array(26).fill(0);
+    let hashS = Array(26).fill(0);
+    let windowLength = s1.length;
+    //fill the arrays 
+    for (let i = 0; i < windowLength; i++) {
+        hashW[s2.charCodeAt(i) - 97]++;
+        hashS[s1.charCodeAt(i) - 97]++;
+    }
+    //moving the window
+    let i = 0;
+    let j = windowLength - 1;
+
+    while (j < s2.length) {
+        if (isHashSame(hashS, hashW)) {
+            return true;
+        }
+        hashW[s2.charCodeAt(i) - 97]--;
+        i++;
+        j++;
+        hashW[s2.charCodeAt(j) - 97]++;
+
+    }
+    return false;
+
+
+};
+
+var isHashSame = function (hashS, hashW) {
+    for (let i = 0; i < 26; i++) {
+        if (hashW[i] !== hashS[i]) {
+            return false;
+        }
+    }
+    return true;
+
+
+}
+
+
+

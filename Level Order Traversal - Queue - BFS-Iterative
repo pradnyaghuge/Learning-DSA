@@ -17,7 +17,6 @@ var levelOrder = function (root) {
         if(!root) return [];
         let levelSize = q.length;
         let levelArr = [];
-        let levelArr = [];
         for (i = 0; i < levelSize; i++) {
             let curr = q.shift();
             curr.left && q.push(curr.left);
